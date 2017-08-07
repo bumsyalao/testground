@@ -1,8 +1,10 @@
 import express from 'express';
 import path from 'path';
+
 import webpack from 'webpack';
 import webpackMiddleware from 'webpack-dev-middleware';
 import webpackConfig from '../webpack.config.dev';
+import webpackHotMiddleware from 'webpack-hot-middleware';
 
 let app = express();
 

@@ -1,6 +1,8 @@
+import webpack from 'webpack';
 import path from 'path';
 
 export default {
+  devtools: 'cheap-module-eval-source-map',
   entry: path.join(__dirname, '/client/index.js'),
   output: {
     path:'/'
@@ -10,11 +12,11 @@ export default {
       {
         test:/\.js$/,
         include: path.join(__dirname, 'client'),
-        loaders: ['babel']
+        loaders: ['babel-loader']
       }
     ]
   },
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['.jsx', '.js']
   }
 }
